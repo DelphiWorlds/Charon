@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8A816949-DA77-4A24-985E-7B3BA0A6F92A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FMX\WebModule\FMXWebModuleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMX\WebStencils\FMXWebStencilsDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMX\Plain\FMXPlainDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console\WebModule\ConsoleWebModuleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console\WebStencils\ConsoleWebStencilsDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Console\Plain\ConsolePlainDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ISAPI\WebModule\ISAPIWebModuleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ISAPI\WebStencils\ISAPIWebStencilsDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FMXWebModuleDemo">
+        <MSBuild Projects="FMX\WebModule\FMXWebModuleDemo.dproj"/>
+    </Target>
+    <Target Name="FMXWebModuleDemo:Clean">
+        <MSBuild Projects="FMX\WebModule\FMXWebModuleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXWebModuleDemo:Make">
+        <MSBuild Projects="FMX\WebModule\FMXWebModuleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXWebStencilsDemo">
+        <MSBuild Projects="FMX\WebStencils\FMXWebStencilsDemo.dproj"/>
+    </Target>
+    <Target Name="FMXWebStencilsDemo:Clean">
+        <MSBuild Projects="FMX\WebStencils\FMXWebStencilsDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXWebStencilsDemo:Make">
+        <MSBuild Projects="FMX\WebStencils\FMXWebStencilsDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXPlainDemo">
+        <MSBuild Projects="FMX\Plain\FMXPlainDemo.dproj"/>
+    </Target>
+    <Target Name="FMXPlainDemo:Clean">
+        <MSBuild Projects="FMX\Plain\FMXPlainDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXPlainDemo:Make">
+        <MSBuild Projects="FMX\Plain\FMXPlainDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConsoleWebModuleDemo">
+        <MSBuild Projects="Console\WebModule\ConsoleWebModuleDemo.dproj"/>
+    </Target>
+    <Target Name="ConsoleWebModuleDemo:Clean">
+        <MSBuild Projects="Console\WebModule\ConsoleWebModuleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsoleWebModuleDemo:Make">
+        <MSBuild Projects="Console\WebModule\ConsoleWebModuleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConsoleWebStencilsDemo">
+        <MSBuild Projects="Console\WebStencils\ConsoleWebStencilsDemo.dproj"/>
+    </Target>
+    <Target Name="ConsoleWebStencilsDemo:Clean">
+        <MSBuild Projects="Console\WebStencils\ConsoleWebStencilsDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsoleWebStencilsDemo:Make">
+        <MSBuild Projects="Console\WebStencils\ConsoleWebStencilsDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConsolePlainDemo">
+        <MSBuild Projects="Console\Plain\ConsolePlainDemo.dproj"/>
+    </Target>
+    <Target Name="ConsolePlainDemo:Clean">
+        <MSBuild Projects="Console\Plain\ConsolePlainDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsolePlainDemo:Make">
+        <MSBuild Projects="Console\Plain\ConsolePlainDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ISAPIWebModuleDemo">
+        <MSBuild Projects="ISAPI\WebModule\ISAPIWebModuleDemo.dproj"/>
+    </Target>
+    <Target Name="ISAPIWebModuleDemo:Clean">
+        <MSBuild Projects="ISAPI\WebModule\ISAPIWebModuleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ISAPIWebModuleDemo:Make">
+        <MSBuild Projects="ISAPI\WebModule\ISAPIWebModuleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ISAPIWebStencilsDemo">
+        <MSBuild Projects="ISAPI\WebStencils\ISAPIWebStencilsDemo.dproj"/>
+    </Target>
+    <Target Name="ISAPIWebStencilsDemo:Clean">
+        <MSBuild Projects="ISAPI\WebStencils\ISAPIWebStencilsDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ISAPIWebStencilsDemo:Make">
+        <MSBuild Projects="ISAPI\WebStencils\ISAPIWebStencilsDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FMXWebModuleDemo;FMXWebStencilsDemo;FMXPlainDemo;ConsoleWebModuleDemo;ConsoleWebStencilsDemo;ConsolePlainDemo;ISAPIWebModuleDemo;ISAPIWebStencilsDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FMXWebModuleDemo:Clean;FMXWebStencilsDemo:Clean;FMXPlainDemo:Clean;ConsoleWebModuleDemo:Clean;ConsoleWebStencilsDemo:Clean;ConsolePlainDemo:Clean;ISAPIWebModuleDemo:Clean;ISAPIWebStencilsDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FMXWebModuleDemo:Make;FMXWebStencilsDemo:Make;FMXPlainDemo:Make;ConsoleWebModuleDemo:Make;ConsoleWebStencilsDemo:Make;ConsolePlainDemo:Make;ISAPIWebModuleDemo:Make;ISAPIWebStencilsDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
