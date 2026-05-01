@@ -35,8 +35,6 @@ type
     function AddMiddleware(const AMiddleware: IMiddleware): IWebApplication;
     function UseServer(const AServer: IWebServer): IWebApplication;
     function UseSSL(const ASSL: IWebSSL): IWebApplication;
-    { ImDNSOwner }
-    procedure PublishStateChange(const APublished: Boolean);
   public
     destructor Destroy; override;
   end;
@@ -65,11 +63,6 @@ end;
 function TWebApplication.GetWebServer: IWebServer;
 begin
   Result := FServer;
-end;
-
-procedure TWebApplication.PublishStateChange(const APublished: Boolean);
-begin
-  // TODO
 end;
 
 procedure TWebApplication.Run(const APort: Integer);
