@@ -4,8 +4,7 @@ interface
 
 uses
   Web.HTTPApp,
-  Charon.Types,
-  Charon.WebController;
+  Charon.Types, Charon.WebController;
 
 type
   TWebDispatcherController = class(TWebController, IWebDispatcherController)

@@ -4,10 +4,8 @@ interface
 
 uses
   System.Classes,
-  Web.HTTPApp,
-  Web.Stencils,
-  Charon.Types,
-  Charon.WebDispatcherController;
+  Web.HTTPApp, Web.Stencils,
+  Charon.Types, Charon.WebDispatcherController;
 
 type
   TWebRequest = Web.HTTPApp.TWebRequest;
@@ -38,8 +36,6 @@ type
 implementation
 
 uses
-  SimpleLog.Log,
-
   System.SysUtils, System.IOUtils, System.Rtti;
 
 { TWebStencilsController }
